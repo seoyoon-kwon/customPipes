@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+    {{phrase | censor:"*****"}}
+  `
 })
 export class AppComponent {
-  title = 'customPipes';
+  phrase:string="This bad phrase is rotten ";
 }
